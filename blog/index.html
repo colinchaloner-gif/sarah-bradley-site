@@ -28,10 +28,13 @@
 <nav>
   <div class="wrap">
     <a class="nav-name" href="/">Sarah Bradley</a>
-    <div class="nav-links">
-      <a class="hide-xs" href="/#about">About</a>
-      <a class="hide-xs" href="/#therapy">Therapy</a>
-      <a class="hide-xs" href="/#workshops">Workshops</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="/#about">About</a>
+      <a href="/#therapy">Therapy</a>
+      <a href="/#workshops">Workshops</a>
       <a href="/blog/" class="active">Blog</a>
       <a href="/#contact">Contact</a>
     </div>
@@ -81,5 +84,21 @@
   </div>
 </footer>
 
+<script>
+  (function(){
+    var t = document.getElementById('navToggle'), n = document.getElementById('navLinks');
+    if(!t || !n) return;
+    t.addEventListener('click', function(){
+      var open = n.classList.toggle('open');
+      t.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', open);
+    });
+    n.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        n.classList.remove('open'); t.classList.remove('open'); t.setAttribute('aria-expanded','false');
+      });
+    });
+  })();
+</script>
 </body>
 </html>
