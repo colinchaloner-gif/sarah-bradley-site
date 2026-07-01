@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dramatherapywithsarah.co.uk/sitemap.xml

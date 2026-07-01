@@ -1,0 +1,5 @@
+# Netlify configuration for dramatherapywithsarah.co.uk
+# Static site — no build step; the repo root IS the published site.
+[build]
+  publish = "."
+  command = ""
