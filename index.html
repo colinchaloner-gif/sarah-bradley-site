@@ -213,11 +213,26 @@
   .contact-actions{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
   .note{ font-size:.9rem; color:var(--ink-soft); margin-top:26px; }
 
-  /* ---------- Data protection ---------- */
-  .privacy{ padding:46px 0 60px; }
-  .privacy .inner{ max-width:720px; margin:0 auto; }
-  .privacy h2{ font-size:1.45rem; margin:0 0 16px; }
-  .privacy p{ font-size:.95rem; color:var(--ink-soft); margin:0 0 14px; }
+  /* ---------- Data protection (footer disclosure) ---------- */
+  .dp{ max-width:620px; margin:26px auto 0; }
+  .dp summary{
+    display:inline-flex; align-items:center; gap:8px; cursor:pointer;
+    list-style:none; -webkit-user-select:none; user-select:none;
+    font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; font-weight:600;
+    color:#9fb0bd; padding:8px 18px; border:1px solid #4a5a68; border-radius:30px;
+    transition:color .2s, border-color .2s;
+  }
+  .dp summary::-webkit-details-marker{ display:none; }
+  .dp summary::after{ content:"\25BE"; font-size:.85em; transition:transform .25s ease; }
+  .dp[open] summary::after{ transform:rotate(180deg); }
+  .dp summary:hover{ color:#e9c477; border-color:#e9c477; }
+  .dp .dp-card{
+    margin-top:16px; text-align:left;
+    background:rgba(255,255,255,.05); border:1px solid #4a5a68; border-radius:12px;
+    padding:20px 24px;
+  }
+  .dp .dp-card p{ font-size:.85rem; color:#b9c4cd; margin:0 0 12px; line-height:1.8; }
+  .dp .dp-card p:last-child{ margin-bottom:0; }
 
   /* ---------- Footer ---------- */
   footer{ background:var(--ink); color:#d8dee4; padding:50px 0 34px; text-align:center; }
@@ -434,32 +449,6 @@
   </div>
 </section>
 
-<!-- ============ DATA PROTECTION ============ -->
-<section class="privacy" id="data-protection">
-  <div class="wrap">
-    <div class="inner">
-      <h2>Data Protection</h2>
-      <p>
-        If you have any concerns about how I have collected, used, stored or shared your
-        personal information, please contact me in the first instance using the contact
-        details provided in this <a href="/privacy/">Privacy Notice</a>. I take data
-        protection concerns seriously and will investigate your complaint fairly and promptly.
-      </p>
-      <p>
-        I will acknowledge receipt of your complaint within 30 days and keep you informed
-        of the progress of my investigation where appropriate. Once my investigation is
-        complete, I will explain the outcome and any action I have taken.
-      </p>
-      <p>
-        If you remain dissatisfied with my response, you have the right to raise your
-        concerns with the Information Commissioner&rsquo;s Office (ICO), the UK&rsquo;s independent
-        authority for data protection. Details of how to contact the ICO are available on
-        its website at <a href="https://www.ico.org.uk" target="_blank" rel="noopener">www.ico.org.uk</a>.
-      </p>
-    </div>
-  </div>
-</section>
-
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap">
@@ -476,6 +465,28 @@
       &nbsp;&middot;&nbsp;
       <a href="https://www.instagram.com/dramatherapywithsarah" target="_blank" rel="noopener">@dramatherapywithsarah</a>
     </div>
+    <details class="dp" id="data-protection">
+      <summary>Data Protection</summary>
+      <div class="dp-card">
+        <p>
+          If you have any concerns about how I have collected, used, stored or shared your
+          personal information, please contact me in the first instance using the contact
+          details provided in this <a href="/privacy/">Privacy Notice</a>. I take data
+          protection concerns seriously and will investigate your complaint fairly and promptly.
+        </p>
+        <p>
+          I will acknowledge receipt of your complaint within 30 days and keep you informed
+          of the progress of my investigation where appropriate. Once my investigation is
+          complete, I will explain the outcome and any action I have taken.
+        </p>
+        <p>
+          If you remain dissatisfied with my response, you have the right to raise your
+          concerns with the Information Commissioner&rsquo;s Office (ICO), the UK&rsquo;s independent
+          authority for data protection. Details of how to contact the ICO are available on
+          its website at <a href="https://www.ico.org.uk" target="_blank" rel="noopener">www.ico.org.uk</a>.
+        </p>
+      </div>
+    </details>
     <div class="hcpc">HCPC-registered Drama Therapist &middot; MA Dramatherapy, University of Roehampton</div>
     <div class="hcpc" style="margin-top:14px;">&copy; <span id="yr"></span> Sarah Bradley. All rights reserved.</div>
   </div>
