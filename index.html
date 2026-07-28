@@ -188,9 +188,9 @@
   .creds li b{ font-weight:700; }
 
   /* ---------- Workshops ---------- */
-  .workshops{ position:relative; overflow:hidden; }
+  .workshops{ position:relative; overflow:hidden; background:var(--cream-deep); }
   .ws-card{
-    background:var(--card); border:1px solid var(--card-line);
+    background:var(--cream); border:1px solid var(--card-line);
     border-radius:18px; padding:46px 40px; max-width:760px; margin:40px auto 0; text-align:center;
   }
   .ws-card .ws-title{
@@ -210,9 +210,9 @@
   .fact .fv{ font-family:'Playfair Display',serif; font-size:1.25rem; color:var(--ink); }
   .fact .fsub{ font-size:.9rem; color:var(--ink-soft); margin-top:4px; }
 
-  /* ---------- Contact ---------- */
-  .contact{ background:var(--cream-deep); text-align:center; }
-  .contact .lead{ margin-bottom:30px; }
+  /* ---------- Sessions & booking ---------- */
+  .sessions{ text-align:center; }
+  .sessions .facts{ margin:42px 0 36px; }
   .contact-actions{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
   .note{ font-size:.9rem; color:var(--ink-soft); margin-top:26px; }
   .pt-seal{ display:flex; justify-content:center; margin-top:26px; min-height:64px; }
@@ -408,11 +408,51 @@
   </div>
 </section>
 
+<!-- ============ SESSIONS & BOOKING ============ -->
+<section class="sessions" id="contact">
+  <div class="wrap">
+    <h2 class="section-title">Individual sessions</h2>
+    <p class="lead">
+      Sessions take place at the Southside Counselling and Therapy Centre in Shawlands.
+      If any of this resonates, I&rsquo;d be glad to hear from you &mdash; I offer a free
+      15-minute phone or online consultation so we can see whether working together feels right.
+    </p>
+    <div class="facts">
+      <div class="fact">
+        <div class="fk">Where</div>
+        <div class="fv">Glasgow Southside</div>
+        <div class="fsub">3 Carment Drive, Glasgow G41</div>
+      </div>
+      <div class="fact">
+        <div class="fk">Cost</div>
+        <div class="fv">&pound;75 per session</div>
+        <div class="fsub">Concession rates available</div>
+      </div>
+      <div class="fact">
+        <div class="fk">Availability</div>
+        <div class="fv">Friday &amp; Saturday</div>
+        <div class="fsub">Mornings &middot; free 15-min consultation</div>
+      </div>
+    </div>
+    <div class="contact-actions">
+      <a class="btn" href="https://www.psychologytoday.com/gb/counselling/sarah-bradley-glasgow/1668733" target="_blank" rel="noopener">Book a free consultation</a>
+      <a class="btn btn-outline" href="https://www.instagram.com/dramatherapywithsarah" target="_blank" rel="noopener">See my work on Instagram</a>
+    </div>
+    <p class="note">Enquiries and bookings are handled securely through my Psychology Today profile.</p>
+    <div class="pt-seal">
+      <!-- Professional verification provided by Psychology Today -->
+      <a href="https://www.psychologytoday.com/profile/1668733" class="sx-verified-seal"></a>
+      <script type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="13" data-id="1668733" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzE2Njg3MzM/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="></script>
+      <!-- End Verification -->
+    </div>
+  </div>
+</section>
+
 <!-- ============ WORKSHOPS ============ -->
 <section class="workshops" id="workshops">
   <div class="wrap">
     <h2 class="section-title">Workshops &amp; Groups</h2>
-    <p class="lead">I also offer in-person creative workshops in Glasgow Southside.</p>
+    <p class="lead">Alongside individual sessions, I run occasional in-person creative workshops and groups in Glasgow Southside.</p>
 
     <!-- Featured next workshop — update data-end + details when a new one is scheduled.
          If the date has passed, the generic card below is shown instead. -->
@@ -441,51 +481,6 @@
         <a class="btn btn-outline" href="/workshops/">See past workshops</a>
         <a class="btn btn-outline" href="#contact">Ask about the next one</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PRACTICAL INFO ============ -->
-<section id="info" style="padding-top:10px;">
-  <div class="wrap">
-    <div class="facts">
-      <div class="fact">
-        <div class="fk">Where</div>
-        <div class="fv">Glasgow Southside</div>
-        <div class="fsub">3 Carment Drive, Glasgow G41</div>
-      </div>
-      <div class="fact">
-        <div class="fk">Sessions</div>
-        <div class="fv">£75 per session</div>
-        <div class="fsub">Concession rates available</div>
-      </div>
-      <div class="fact">
-        <div class="fk">Availability</div>
-        <div class="fv">Friday &amp; Saturday</div>
-        <div class="fsub">Mornings &middot; free 15-min consultation</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTACT ============ -->
-<section class="contact" id="contact">
-  <div class="wrap">
-    <h2 class="section-title">Get in touch</h2>
-    <p class="lead">
-      If any of this resonates, I&rsquo;d be glad to hear from you. I offer a free 15-minute
-      phone or online consultation so we can see whether working together feels right.
-    </p>
-    <div class="contact-actions">
-      <a class="btn" href="https://www.psychologytoday.com/gb/counselling/sarah-bradley-glasgow/1668733" target="_blank" rel="noopener">Book a free consultation</a>
-      <a class="btn btn-outline" href="https://www.instagram.com/dramatherapywithsarah" target="_blank" rel="noopener">See my work on Instagram</a>
-    </div>
-    <p class="note">Enquiries and bookings are handled securely through my Psychology Today profile.</p>
-    <div class="pt-seal">
-      <!-- Professional verification provided by Psychology Today -->
-      <a href="https://www.psychologytoday.com/profile/1668733" class="sx-verified-seal"></a>
-      <script type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="13" data-id="1668733" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzE2Njg3MzM/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="></script>
-      <!-- End Verification -->
     </div>
   </div>
 </section>
