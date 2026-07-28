@@ -212,6 +212,21 @@
   .contact .lead{ margin-bottom:30px; }
   .contact-actions{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
   .note{ font-size:.9rem; color:var(--ink-soft); margin-top:26px; }
+  .pt-seal{ display:flex; justify-content:center; margin-top:26px; min-height:64px; }
+
+  /* ---------- Newsletter ---------- */
+  .newsletter{ padding:56px 0; text-align:center; }
+  .newsletter h2{ font-size:1.7rem; margin:0 0 10px; }
+  .newsletter .nl-sub{ color:var(--ink-soft); max-width:520px; margin:0 auto 26px; }
+  .nl-form{ display:flex; gap:10px; justify-content:center; flex-wrap:wrap; }
+  .nl-form input[type=email]{
+    width:min(340px, 100%); padding:13px 20px; border-radius:40px;
+    border:1px solid var(--card-line); background:#fff; font:inherit;
+    font-size:.95rem; color:var(--ink);
+  }
+  .nl-form input[type=email]:focus{ outline:2px solid var(--mustard); border-color:var(--mustard); }
+  .nl-form .btn{ font-family:inherit; cursor:pointer; }
+  .nl-note{ font-size:.8rem; color:var(--ink-soft); margin-top:16px; }
 
   /* ---------- Data protection (footer disclosure) ---------- */
   .dp{ max-width:620px; margin:26px auto 0; }
@@ -446,6 +461,27 @@
       <a class="btn btn-outline" href="https://www.instagram.com/dramatherapywithsarah" target="_blank" rel="noopener">See my work on Instagram</a>
     </div>
     <p class="note">Enquiries and bookings are handled securely through my Psychology Today profile.</p>
+    <div class="pt-seal">
+      <!-- Professional verification provided by Psychology Today -->
+      <a href="https://www.psychologytoday.com/profile/1668733" class="sx-verified-seal"></a>
+      <script type="text/javascript" src="https://member.psychologytoday.com/verified-seal.js" data-badge="13" data-id="1668733" data-code="aHR0cHM6Ly93d3cucHN5Y2hvbG9neXRvZGF5LmNvbS9hcGkvdmVyaWZpZWQtc2VhbC9zZWFscy8xMy9wcm9maWxlLzE2Njg3MzM/Y2FsbGJhY2s9c3hjYWxsYmFjaw=="></script>
+      <!-- End Verification -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter" id="newsletter">
+  <div class="wrap">
+    <h2>Join my newsletter</h2>
+    <p class="nl-sub">Occasional reflections, workshop dates and news &mdash; a few emails a year, no spam.</p>
+    <form class="nl-form" name="newsletter" method="POST" action="/thanks/" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="newsletter">
+      <p style="display:none;"><label>Don&rsquo;t fill this in: <input name="bot-field"></label></p>
+      <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+      <button class="btn" type="submit">Sign up</button>
+    </form>
+    <p class="nl-note">Your email is only used to send the newsletter &mdash; unsubscribe anytime. See my <a href="/privacy/">Privacy Notice</a>.</p>
   </div>
 </section>
 
