@@ -73,15 +73,22 @@
   .ws-venue{ color:var(--ink-soft); font-size:.95rem; }
   .ws-item p{ color:var(--ink-soft); margin:16px 0 0; font-size:1.05rem; }
   .ws-item .ws-book{ margin-top:22px; }
-  /* Past entries: quiet archive rows, not cards */
-  .ws-item.is-past{
-    background:transparent; border:0; border-left:3px solid var(--card-line);
-    border-radius:0; padding:4px 0 4px 24px; margin-bottom:30px;
+  /* Live workshops: bright, lifted card */
+  #upcomingList .ws-item{
+    background:#FFFDF7;
+    border-top:4px solid var(--mustard);
+    box-shadow:0 12px 30px rgba(52,66,79,.09);
   }
-  .ws-item.is-past .ws-when{ color:var(--ink-soft); font-size:.78rem; }
-  .ws-item.is-past h2{ font-size:1.15rem; margin:6px 0 4px; }
-  .ws-item.is-past .ws-venue{ font-size:.88rem; }
-  .ws-item.is-past p{ font-size:.92rem; margin-top:10px; }
+
+  /* Past entries: muted cards */
+  .ws-item.is-past{
+    background:var(--cream-deep);
+    padding:26px 34px;
+  }
+  .ws-item.is-past .ws-when{ color:var(--ink-soft); font-size:.8rem; }
+  .ws-item.is-past h2{ font-size:1.3rem; color:var(--ink-soft); }
+  .ws-item.is-past .ws-venue{ font-size:.9rem; }
+  .ws-item.is-past p{ font-size:.95rem; }
   .ws-item.is-past .ws-book{ display:none; }
 
   /* Archive zone: clearly separated and muted */
