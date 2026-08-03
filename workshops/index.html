@@ -73,11 +73,21 @@
   .ws-venue{ color:var(--ink-soft); font-size:.95rem; }
   .ws-item p{ color:var(--ink-soft); margin:16px 0 0; font-size:1.05rem; }
   .ws-item .ws-book{ margin-top:22px; }
-  .ws-item.is-past{ padding:24px 34px; }
-  .ws-item.is-past .ws-when{ color:var(--ink-soft); }
-  .ws-item.is-past h2{ font-size:1.3rem; }
-  .ws-item.is-past p{ font-size:.95rem; }
+  /* Past entries: quiet archive rows, not cards */
+  .ws-item.is-past{
+    background:transparent; border:0; border-left:3px solid var(--card-line);
+    border-radius:0; padding:4px 0 4px 24px; margin-bottom:30px;
+  }
+  .ws-item.is-past .ws-when{ color:var(--ink-soft); font-size:.78rem; }
+  .ws-item.is-past h2{ font-size:1.15rem; margin:6px 0 4px; }
+  .ws-item.is-past .ws-venue{ font-size:.88rem; }
+  .ws-item.is-past p{ font-size:.92rem; margin-top:10px; }
   .ws-item.is-past .ws-book{ display:none; }
+
+  /* Archive zone: clearly separated and muted */
+  #pastZone{ margin-top:72px; padding-top:36px; border-top:1px solid var(--card-line); }
+  #pastZone .ws-zone-title{ color:var(--ink-soft); }
+  .ws-zone-sub{ color:var(--ink-soft); font-size:.92rem; margin:-8px 0 26px; }
   .ws-empty{
     background:var(--cream-deep); border:1px dashed var(--card-line);
     border-radius:16px; padding:34px; text-align:center; color:var(--ink-soft);
@@ -166,6 +176,7 @@
   <!-- Past -->
   <section class="ws-zone" id="pastZone" hidden>
     <h2 class="ws-zone-title" style="font-family:'Mulish',sans-serif;">Past workshops</h2>
+    <p class="ws-zone-sub">A record of previous workshops, groups and conference sessions.</p>
     <div id="pastList"></div>
   </section>
 
