@@ -100,6 +100,23 @@
     border-radius:16px; padding:34px; text-align:center; color:var(--ink-soft);
   }
   .ws-empty a{ color:var(--terracotta); }
+
+  /* For-therapists callout */
+  .improv-cta{ margin-top:56px; }
+  .it-card{
+    background:var(--card); border:1px solid var(--card-line);
+    border-top:4px solid var(--sage); border-radius:16px; padding:32px 34px;
+  }
+  .it-eyebrow{
+    font-size:.75rem; letter-spacing:.18em; text-transform:uppercase;
+    color:#5C744F; font-weight:700;
+  }
+  .it-card h2{ font-size:1.5rem; margin:10px 0 14px; }
+  .it-card p{ color:var(--ink-soft); margin:0 0 14px; font-size:1.02rem; }
+  .it-actions{ margin-top:20px; display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .it-email{ font-size:.95rem; }
+  .it-email a{ color:var(--terracotta); text-decoration:none; }
+  .it-email a:hover{ text-decoration:underline; }
 </style>
 </head>
 
@@ -171,6 +188,35 @@
         </p>
       </article>
 
+      <article class="ws-item" data-end="2026-01-10T18:00:00+00:00">
+        <div class="ws-when">Sat 10 January 2026 &middot; 90-minute experiential workshop</div>
+        <h2>Ensemble Alchemy: Using Long-Form Improv to Transform Group Shadows</h2>
+        <div class="ws-venue">British Association of Dramatherapists Annual Conference &middot; Glasgow</div>
+        <p>
+          An experiential workshop exploring how long-form improvisation can make hidden group
+          dynamics visible &mdash; the unspoken tensions, power imbalances and habitual roles that
+          groups often carry beneath the surface. Drawing on the collaborative principles of
+          long-form improv, including UCB traditions, participants used &ldquo;Yes, and&hellip;&rdquo;,
+          ensemble thinking and spontaneous scene-making to explore the group as a living system
+          &mdash; encountering roles such as leader, outsider, rescuer or disruptor through play,
+          and meeting the group shadow with curiosity rather than intellectual analysis.
+        </p>
+      </article>
+
+      <article class="ws-item" data-end="2025-10-25T18:00:00+01:00">
+        <div class="ws-when">Sat 25 October 2025 &middot; 3-hour CPD workshop</div>
+        <h2>Myth &amp; Masculinity: Exploring Toxic Masculinity in Adolescence Through Greek Myth and Dramatherapy</h2>
+        <div class="ws-venue"><a href="https://www.mhfestival.com/events/creative-workshops-supporting-adolescent-identity-expression/" target="_blank" rel="noopener">Scottish Mental Health Arts Festival 2025</a></div>
+        <p>
+          Using Greek mythology and dramatherapy, this CPD workshop explored the roots and
+          expressions of toxic masculinity in adolescent boys &mdash; examining how violent
+          fantasies, emotional disconnection and grandiose behaviours can reflect deeper
+          experiences of shame, vulnerability and identity loss. Grounded in James Gilligan&rsquo;s
+          theory that violence stems from unmet needs for love and respect, participants left
+          with creative, trauma-informed tools to support boys and young men in their development.
+        </p>
+      </article>
+
     </div>
     <div class="ws-empty" id="noUpcoming" hidden>
       <p style="margin:0;">
@@ -181,10 +227,29 @@
     </div>
   </section>
 
+  <!-- For therapists: improv & therapy practice groups -->
+  <section class="ws-zone improv-cta" id="improv-therapy">
+    <div class="it-card">
+      <div class="it-eyebrow">For therapists</div>
+      <h2>Interested in Improv and Therapy?</h2>
+      <p>Are you a therapist curious about how improvisation can enrich therapeutic practice?</p>
+      <p>
+        Monthly practice groups will begin in Autumn 2026, offering a welcoming and
+        collaborative space to explore improv, creativity, spontaneity and connection
+        through a therapeutic lens.
+      </p>
+      <p>Get in touch to register your interest and receive further details.</p>
+      <div class="it-actions">
+        <a class="btn btn-outline" href="mailto:sbradleydramatherapy@gmail.com?subject=Improv%20and%20Therapy%20practice%20groups">Register your interest</a>
+        <span class="it-email"><a href="mailto:sbradleydramatherapy@gmail.com">sbradleydramatherapy@gmail.com</a></span>
+      </div>
+    </div>
+  </section>
+
   <!-- Past -->
   <section class="ws-zone" id="pastZone" hidden>
     <h2 class="ws-zone-title" style="font-family:'Mulish',sans-serif;">Past workshops</h2>
-    <p class="ws-zone-sub">A record of previous workshops, groups and conference sessions.</p>
+    <p class="ws-zone-sub">A record of previous workshops, CPD training and conference sessions.</p>
     <div id="pastList"></div>
   </section>
 
